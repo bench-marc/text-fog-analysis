@@ -1,8 +1,11 @@
 CREATE DATABASE IF NOT EXISTS gunning_fog_index;
 USE gunning_fog_index;
 
+DROP TABLE IF EXISTS gunningfogindex;
 CREATE TABLE gunningfogindex(
-	KAM_KEY INT NOT NULL,
-    gfindex FLOAT,
-    editedtext VARCHAR(100),
-    PRIMARY KEY (KAM_KEY));
+	kam_key INT NOT NULL,
+    title VARCHAR(1000),
+    description_index FLOAT,
+    response_index FLOAT, 
+    conclusion_index FLOAT, 
+    PRIMARY KEY (kam_key));
